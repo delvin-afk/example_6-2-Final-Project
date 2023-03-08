@@ -12,10 +12,9 @@ DigitalOut rgbLED[] = {r, b, g};
 
 void toGreenRGBLED()
 {
-    while (isOpenDoor)
-    {
-        rgbLED[] = {0.0, 1.0, 0.0};
-    }
+    r = 0.0;
+    g = 1.0;
+    b = 0.0;
 }
 
 void toRedRGBLED()
