@@ -3,6 +3,6 @@
 
 void openDoor();
 
-void servo_doorInit()
+void servo_doorInit();
 
 #endif
