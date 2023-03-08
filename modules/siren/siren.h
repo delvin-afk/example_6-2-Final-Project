@@ -10,6 +10,8 @@
 //=====[Declarations (prototypes) of public functions]=========================
 
 void sirenInit();
+bool sirenStateRead();
+void sirenStateWrite( bool state );
 void oPiezoState();
 void iPiezoState();
 
