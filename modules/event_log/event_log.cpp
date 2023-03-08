@@ -2,9 +2,7 @@
 
 #include "mbed.h"
 #include "arm_book_lib.h"
-
 #include "event_log.h"
-
 #include "siren.h"
 #include "fire_alarm.h"
 #include "user_interface.h"
