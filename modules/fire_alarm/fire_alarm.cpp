@@ -61,7 +61,6 @@ void fireAlarmUpdate()
 {
     fireAlarmActivationUpdate();
     fireAlarmDeactivationUpdate();
-    sirenUpdate( fireAlarmStrobeTime() );
     strobeLightUpdate( fireAlarmStrobeTime() );    
 }
 
