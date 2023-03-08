@@ -3,6 +3,9 @@
 #include "ldr_sensor.h"
 #include "siren.h"
 #include "smart_home_system.h"
+#include "entryway_light.h"
+#include "servo_door.h"
+#include "rgb.h"
 
 AnalogIn eLDR(A2);
 AnalogIn rLDR(A3);
@@ -18,22 +21,16 @@ static bool rLdrState = OFF;  // Delvin
 static bool gLdrState = OFF;  // Delvin
 
 
-bool rLdrStateRead();
-bool gLdrStateRead();
-void isDarkness();
-bool isrRFID();
-bool isgRFID();
-
-
-
 void ldrSensorInit() { }
 void ldrSensorUpdate() { }
 
-bool rLdrStateRead(){         //Delvin
+bool rLdrStateRead()
+{         //Delvin
     return rLdrState;         //Delvin 
 }
 
-bool gLdrStateRead(){     //Delvin
+bool gLdrStateRead()
+{     //Delvin
     return gLdrState;
 }
 
@@ -47,7 +44,7 @@ void isDarkness()
     }
 }
 
-bool isrRFID()
+void isrRFID()
 {
     if ( rLDRvalue > threshold )
     {
@@ -56,7 +53,7 @@ bool isrRFID()
     }
 }
 
-bool isgRFID()
+void isgRFID()
 {
     if ( gLDRvalue > threshold )
     {
