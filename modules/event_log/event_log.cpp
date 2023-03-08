@@ -69,11 +69,11 @@ void eventLogUpdate()
     eventLogElementStateUpdate( SBLastState ,currentState, "LED_SB" );
     SBLastState = currentState;
     
-    currentState = rLdrRead();
+    currentState = rLdrStateRead();
     eventLogElementStateUpdate( rLdrLastState, currentState, "rLDr state" );   // new
     rLdrLastState = currentState;
 
-    currentState = gLdrRead();
+    currentState = gLdrStateRead();
     eventLogElementStateUpdate( gLdrLastState, currentState, "gLDr state" ); // new
     rLdrLastState = currentState;
 }
