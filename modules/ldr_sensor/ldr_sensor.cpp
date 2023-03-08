@@ -18,6 +18,14 @@ static bool rLdrState = OFF;  // Delvin
 static bool gLdrState = OFF;  // Delvin
 
 
+bool rLdrStateRead();
+bool gLdrStateRead();
+void isDarkness();
+bool isrRFID();
+bool isgRFID();
+
+
+
 void ldrSensorInit() { }
 void ldrSensorUpdate() { }
 
