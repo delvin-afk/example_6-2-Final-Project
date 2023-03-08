@@ -12,7 +12,7 @@ DigitalInOut iPiezo(PC_9);
 static int currentoPiezoTime = 0;
 static int currentiPiezoTime = 0;
 
-
+static bool sirenState = OFF;
 
 void sirenInit()
 {
@@ -20,6 +20,16 @@ void sirenInit()
     oPiezo.input();
     iPiezo.mode(OpenDrain);
     iPiezo.input();
+}
+
+bool sirenStateRead()
+{
+    return sirenState;
+}
+
+void sirenStateWrite( bool state )
+{
+    sirenState = state;
 }
 
 
@@ -34,7 +44,7 @@ void oPiezoState()
 
 void iPiezoState()
 {
-    if( alarmState )
+    if( sirenState )
     {
         iPiezo.output();
         iPiezo = LOW;
